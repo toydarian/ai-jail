@@ -1,0 +1,23 @@
+# Allow my repos
+# If you have one or more specific directories where all the repos you want your agent to work with are located, whitelist them like this
+# /path/to/repos/ r,
+# /path/to/repos/** rwklix,
+#
+# Otherwise you might want to whitelist your whole home-directory.
+# This is not recommended, as it will allow your agent to wreck havock in your home.
+# But sensitive files in common locations are still denied by the policy, so it won't be able to use your ssh-keys, for example.
+# /home/youruser/** rwklix,
+
+# Explicit denies
+# You might want to explicitely deny access to certain files
+# deny /home/youruser/**/*.kdbx rwklx,
+
+# If you selectively whitelisted certain repos, you can deny your agent to commit/rebase or otherwise destroy the local copy of your repository like this.
+# It should be able to code, but you need to commit yourself. It will not be able to analyze any git history.
+# deny /path/to/repos/**/.git/** rwklx,
+
+# Deny various directories
+# These are directories and files your agent should have no business messing with. But if you want to allow it, go ahead and remove those lines.
+deny @{ONLY_HOME}/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos}/** rwklx,
+deny @{ONLY_HOME}/{snap}/* rwklx,
+deny @{ONLY_HOME}/*.rc rwklx,
