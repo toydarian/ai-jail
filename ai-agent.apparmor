@@ -72,7 +72,7 @@ include <tunables/global>
   @{HOMEDIRS} r,
   @{ONLY_HOME} r,
   @{ONLY_HOME}/.local/** r,
-  @{ONLY_HOME}/.local/share/{opencode,ai.opencode.desktop}/** rwklix,
+  @{ONLY_HOME}/.local/share/{opencode,ai.opencode.desktop}/** rwklmix,
   @{ONLY_HOME}/.local/state/opencode/** rwklix,
   @{ONLY_HOME}/.config/** r,
   @{ONLY_HOME}/.config/opencode/** rwkl,

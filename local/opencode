@@ -2,6 +2,7 @@
 # If you have one or more specific directories where all the repos you want your agent to work with are located, whitelist them like this
 # /path/to/repos/ r,
 # /path/to/repos/** rwklix,
+# /path/to/repos/**/* rwklix,
 #
 # Otherwise you might want to whitelist your whole home-directory.
 # This is not recommended, as it will allow your agent to wreck havock in your home.
