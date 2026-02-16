@@ -65,6 +65,7 @@ include <tunables/global>
   /sys/** r,
   /tmp/ r,
   owner /tmp/** rwm,
+  /proc/ r,
   /proc/** r,
 
   # Allow access to certain directories in the user home
@@ -72,7 +73,7 @@ include <tunables/global>
   @{HOMEDIRS} r,
   @{ONLY_HOME} r,
   @{ONLY_HOME}/.local/** r,
-  @{ONLY_HOME}/.local/share/{opencode,ai.opencode.desktop}/** rwklmix,
+  @{ONLY_HOME}/.local/share/{opencode,ai.opencode.desktop,opentui}/** rwklmix,
   @{ONLY_HOME}/.local/state/opencode/** rwklix,
   @{ONLY_HOME}/.config/** r,
   @{ONLY_HOME}/.config/opencode/** rwkl,

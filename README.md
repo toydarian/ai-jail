@@ -37,6 +37,7 @@ You will need root-privileges, as well as AppArmor working on your system.
 On the first install, run 
 ```bash
 sudo cp local/ai-agent /etc/apparmor.d/local/ai-agent
+mkdir -p ~/.local/state/opencode ~/.local/share/{opencode,opentui} ~/.config/opencode ~/.bun
 ```
 
 Open the file `/etc/apparmor.d/local/ai-agent` in your preferred text-editor (with root privileges) and modify it as described in the comments.  
